@@ -85,19 +85,18 @@ function compare(event) {
 
         var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
-        // Correct condition 
+        // CORRECT
         if (element.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "You're correct!";
           
         } else {
-            // Will deduct 10 seconds off secondsLeft for wrong answers
+            // WRONG :Will deduct 10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Oopsies! The correct answer is:  " + questions[questionIndex].answer;
         }
 
     }
-    // Question Index determines number question user is on
     questionIndex++;
 
     if (questionIndex >= questions.length) {
@@ -115,14 +114,12 @@ function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // Heading:
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
     questionsDiv.appendChild(createH1);
 
-    // Paragraph
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
@@ -160,7 +157,6 @@ function allDone() {
     createSubmit.textContent = "Submit";
 
     questionsDiv.appendChild(createSubmit);
-
     // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
@@ -193,6 +189,8 @@ function allDone() {
 
 
 
+
+//SIMPLE QUIZ TEST CODE
 
 /* Question functions for quiz questions
 let qOne = {
