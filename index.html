@@ -14,7 +14,9 @@
     <h1 id="title"> Get To Know Me</h1>
 
 <!--Welcome message and instructions-->
-    <div class="welcome">
+<div id="wrapper">
+    <div id="currentTime"></div>
+        <div id="questionsDiv">
         <p> 
         Welcome to Vanity Fair, except it's not about you! It's all about me; the junior developer behind this little quiz.
         </p>
@@ -26,28 +28,23 @@
         </p>
 
     <h2> Good luck and good cheer!</h2>
+    <ul id="choicesUl"></ul>
+        </div>
     </div>
+</div>
 
 <!-- Start button to trigger the beginning of the quiz-->
-    <button id="btn"> START</button>
+    <button id="startTime"> START</button>
 
-<!--Question structure-->
-    <div id="question"></div>
-    <ul>
-        <li class="option"></li>
-        <li class="option"></li>
-        <li class="option"></li>
-        <li class="option"></li>
-   
-    </ul>
+ <!-- Highscores Link -->
+ <a href="HighScores.html">View Highscores</a>
+ 
 
 <!--Timer-->
 <p>
     <h1 class="time" style="text-align:center;"></h1>
     <div id="main"></div> 
 </p>
-
-<!--High Scores-->
 
 <!--Script for questions-->
 <script src="./script.js"></script>
